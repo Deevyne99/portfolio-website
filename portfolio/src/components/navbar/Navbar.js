@@ -4,12 +4,11 @@ import {
   FaTimes,
   FaGithub,
   FaLinkedin,
-  FaFacebook,
-  FaLinkedinIn,
   FaTwitter,
 } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
-import { BsFillPersonLinesFill } from 'react-icons/bs'
+
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -23,11 +22,31 @@ const Navbar = () => {
       </div>
 
       <ul className='hidden md:flex '>
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li>
+          <Link to='home' smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to='about' smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to='skills' smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to='work' smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link to='contact' smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Hamburger */}
@@ -42,32 +61,68 @@ const Navbar = () => {
             : 'hidden'
         }`}
       >
-        <li className='py-6 text-4xl'>Home</li>
-        <li className='py-6 text-4xl'>About</li>
-        <li className='py-6 text-4xl'>Skills</li>
-        <li className='py-6 text-4xl'>Work</li>
-        <li className='py-6 text-4xl'>Contact</li>
+        <li className='py-6 text-4xl'>
+          <Link to='home' onClick={handleClick} smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          <Link to='about' onClick={handleClick} smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          <Link to='skills' onClick={handleClick} smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          <Link to='home' onClick={handleClick} smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className='py-6 text-4xl'>
+          <Link to='contact' onClick={handleClick} smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
       {/* social icons */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>
           <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-blue-500'>
-            <a href='/' className='flex justify-between w-full text-gray-200'>
+            <a
+              href='https://www.linkedin.com/in/deevyne99'
+              className='flex justify-between w-full text-gray-200'
+              target='_blank'
+            >
               linkedin <FaLinkedin size={30} />
             </a>
           </li>
           <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-[#333333]'>
-            <a href='/' className='flex justify-between w-full text-gray-200'>
+            <a
+              href='https://github.com/Deevyne99'
+              className='flex justify-between w-full text-gray-200'
+              target='_blank'
+            >
               github <FaGithub size={30} />
             </a>
           </li>
           <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-[#6fc2b0]'>
-            <a href='/' className='flex justify-between w-full text-gray-200'>
+            <a
+              href='/https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&su=Hi+There&to=kaludivine545@gmail.com&body=body+goes+here'
+              className='flex justify-between w-full text-gray-200'
+              target='_blank'
+            >
               Email <HiOutlineMail size={30} />
             </a>
           </li>
           <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-blue-500'>
-            <a href='/' className='flex justify-between w-full text-gray-200'>
+            <a
+              href='https://twitter.com/kaluDivine15'
+              className='flex justify-between w-full text-gray-200'
+              target='_blank'
+            >
               twitter <FaTwitter size={30} />
             </a>
           </li>

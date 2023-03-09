@@ -4,7 +4,10 @@ import { data } from '../../data'
 
 const Skills = () => {
   return (
-    <section name='skills' className='w-full h-full bg-[#0a192f] text-gray-300'>
+    <section
+      name='skills'
+      className='w-full h-full bg-[#0a192f] text-gray-300 lg:py-16'
+    >
       {/* Container */}
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div>
