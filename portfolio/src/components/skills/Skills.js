@@ -1,13 +1,5 @@
 import React from 'react'
 
-import HTML from '../../images/html.png'
-import CSS from '../../images/css.png'
-import JavaScript from '../../images/javascript.png'
-import ReactImg from '../../images/react.png'
-import Node from '../../images/node.png'
-import GitHub from '../../images/github.png'
-import Tailwind from '../../images/tailwind.png'
-import figma from '../../images/figma.png'
 import { data } from '../../data'
 
 const Skills = () => {
@@ -26,7 +18,10 @@ const Skills = () => {
           {data.map((item) => {
             const { id, img, text } = item
             return (
-              <div className='shadow-lg shadow-[#040c16] hover:scale-110 duration-500 w-[250px] rounded-md'>
+              <div
+                key={id}
+                className='shadow-lg shadow-[#040c16] hover:scale-110 duration-500 w-[250px] rounded-md'
+              >
                 <img className='w-20 mx-auto' src={img} alt={text} />
                 <p className='my-4 uppercase'>{text}</p>
               </div>
