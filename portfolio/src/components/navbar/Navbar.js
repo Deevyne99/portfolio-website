@@ -1,5 +1,15 @@
 import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import {
+  FaBars,
+  FaTimes,
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaLinkedinIn,
+  FaTwitter,
+} from 'react-icons/fa'
+import { HiOutlineMail } from 'react-icons/hi'
+import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -38,6 +48,31 @@ const Navbar = () => {
         <li className='py-6 text-4xl'>Work</li>
         <li className='py-6 text-4xl'>Contact</li>
       </ul>
+      {/* social icons */}
+      <div className='hidden xl:flex fixed flex-col top-[35%] left-0'>
+        <ul>
+          <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-blue-500'>
+            <a href='/' className='flex justify-between w-full text-gray-200'>
+              linkedin <FaLinkedin size={30} />
+            </a>
+          </li>
+          <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-[#333333]'>
+            <a href='/' className='flex justify-between w-full text-gray-200'>
+              github <FaGithub size={30} />
+            </a>
+          </li>
+          <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-[#6fc2b0]'>
+            <a href='/' className='flex justify-between w-full text-gray-200'>
+              Email <HiOutlineMail size={30} />
+            </a>
+          </li>
+          <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-blue-500'>
+            <a href='/' className='flex justify-between w-full text-gray-200'>
+              twitter <FaTwitter size={30} />
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
   )
 }
