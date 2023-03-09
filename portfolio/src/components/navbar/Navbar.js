@@ -49,7 +49,7 @@ const Navbar = () => {
         <li className='py-6 text-4xl'>Contact</li>
       </ul>
       {/* social icons */}
-      <div className='hidden xl:flex fixed flex-col top-[35%] left-0'>
+      <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>
           <li className='w-[140px] h-[60px] flex justify-between items-center ml-[-90px] hover:ml-[-5px] duration-300 capitalize bg-blue-500'>
             <a href='/' className='flex justify-between w-full text-gray-200'>
